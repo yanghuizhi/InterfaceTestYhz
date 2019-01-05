@@ -46,12 +46,6 @@ class RunMain:
                     depend_key = self.data.get_depend_field(i)
                     request_data[depend_key] = depend_response_data
 
-                # if depend_case is not None:  # 获取依赖
-                #     dep = DependdentData()
-                #     # 获取依赖的key
-                #     depend_key = self.data.get_depend_field(i)
-                #     data[depend_key] = dep.get_data_for_key(i)
-
                 res = self.run_method.run_main(
                     method,
                     url,

@@ -46,17 +46,17 @@ class DependdentData(object):
         return [math.value for math in madle][0]
 
 if __name__ == '__main__':
-    # order={
-    #       "data": [],
-    #       "errorCode": 1006,
-    #       "errorDesc": "token error",
-    #       "status": 1,
-    #       "timestamp": 1122334455
-    #         }
-    # res = "timestamp"
-    # json_exe=parse(res)
-    # madle=json_exe.find(order)
-    # print([math.value for math in madle][0])
+    order={
+          "data": [],
+          "errorCode": 1006,
+          "errorDesc": "token error",
+          "status": 1,
+          "timestamp": 1122334455
+            }
+    res = "timestamp"
+    json_exe=parse(res)
+    madle=json_exe.find(order)
+    print([math.value for math in madle][0])
 
     ee = DependdentData("yhz-1")
     print(ee.get_data_for_key(2))
