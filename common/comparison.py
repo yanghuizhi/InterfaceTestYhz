@@ -4,6 +4,9 @@
 """
     将放回的文件和原文件对比
 """
+import json
+from filecmp import cmp
+
 
 class Comparison(object):
 
@@ -22,3 +25,13 @@ class Comparison(object):
         else:
             flag = False
         return flag
+
+
+    # 字典对比,判断两个字典是否想等
+    def is_equal_dict(self,dict_one,dict_two):
+
+        if isinstance(dict_one,str):
+            dict_one=json.loads(dict_one)
+        if isinstance(dict_one,str):
+            dict_two=json.loads(dict_two)
+        return cmp(dict_one,dict_two)

@@ -1,0 +1,48 @@
+2019-01-06 15:16:18,277	File "log.py",line 29	INFO: {
+  "data": [],
+  "errorCode": 1006,
+  "errorDesc": "token error",
+  "status": 1,
+  "timestamp": 1546758979796
+}
+2019-01-06 15:16:18,327	File "connectionpool.py",line 205	DEBUG: Starting new HTTP connection (1): www.imooc.com:80
+2019-01-06 15:16:18,429	File "connectionpool.py",line 393	DEBUG: http://www.imooc.com:80 "POST /api3/userloginbyemail HTTP/1.1" 200 91
+2019-01-06 15:16:18,454	File "connectionpool.py",line 205	DEBUG: Starting new HTTP connection (1): www.imooc.com:80
+2019-01-06 15:16:18,562	File "connectionpool.py",line 393	DEBUG: http://www.imooc.com:80 "POST /api3/getbanneradvertver2 HTTP/1.1" 200 91
+2019-01-06 15:16:18,563	File "log.py",line 29	INFO: {
+  "data": [],
+  "errorCode": 1006,
+  "errorDesc": "token error",
+  "status": 1,
+  "timestamp": 1546758980081
+}
+2019-01-06 15:16:18,587	File "connectionpool.py",line 205	DEBUG: Starting new HTTP connection (1): www.imooc.com:80
+2019-01-06 15:16:18,700	File "connectionpool.py",line 393	DEBUG: http://www.imooc.com:80 "POST /api3/userloginbyemail HTTP/1.1" 200 91
+2019-01-06 15:16:18,701	File "log.py",line 29	INFO: {
+  "data": [],
+  "errorCode": 1006,
+  "errorDesc": "token error",
+  "status": 1,
+  "timestamp": 1546758980223
+}
+2019-01-06 15:16:18,759	File "connectionpool.py",line 205	DEBUG: Starting new HTTP connection (1): www.imooc.com:80
+2019-01-06 15:16:18,899	File "connectionpool.py",line 393	DEBUG: http://www.imooc.com:80 "POST /api3/userloginbyemail HTTP/1.1" 200 91
+2019-01-06 15:16:18,909	File "connectionpool.py",line 205	DEBUG: Starting new HTTP connection (1): www.imooc.com:80
+2019-01-06 15:16:19,003	File "connectionpool.py",line 393	DEBUG: http://www.imooc.com:80 "POST /api3/userloginbyemail HTTP/1.1" 200 91
+2019-01-06 15:16:19,004	File "log.py",line 29	INFO: {
+  "data": [],
+  "errorCode": 1006,
+  "errorDesc": "token error",
+  "status": 1,
+  "timestamp": 1546758980531
+}
+2019-01-06 15:16:19,030	File "connectionpool.py",line 205	DEBUG: Starting new HTTP connection (1): www.imooc.com:80
+2019-01-06 15:16:19,125	File "connectionpool.py",line 393	DEBUG: http://www.imooc.com:80 "POST /api3/getbanneradvertver2 HTTP/1.1" 200 91
+2019-01-06 15:16:19,125	File "log.py",line 29	INFO: {
+  "data": [],
+  "errorCode": 1006,
+  "errorDesc": "token error",
+  "status": 1,
+  "timestamp": 1546758980655
+}
+2019-01-06 15:16:19,144	File "log.py",line 29	INFO: None

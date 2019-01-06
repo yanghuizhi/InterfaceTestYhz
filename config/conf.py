@@ -13,6 +13,7 @@ from unit.unit_time import time_test
 """
 DIRE_NAME = (os.path.dirname(os.path.dirname(__file__))+"/case/")
 REPORT_DIRE_NAME = (os.path.dirname(os.path.dirname(__file__))+"/report/")
+LOG_NAME = (os.path.dirname(os.path.dirname(__file__))+"/logs/")
 
 """
     文件类
