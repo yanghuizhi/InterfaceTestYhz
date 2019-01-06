@@ -39,10 +39,17 @@ class RunMain:
                 #     header
                 # )
 
-                if depend_case is not None:  # 获取依赖
+                """
+                ###############################################
+                                依赖类
+                ############################################### 
+                """
+
+                if depend_case is not None:
                     self.depend_data = DependdentData(depend_case)
-                    # 获取依赖的key
+                    # 获取依赖的响应数据
                     depend_response_data = self.depend_data.get_data_for_key(i)
+                    # 获取依赖的key
                     depend_key = self.data.get_depend_field(i)
                     request_data[depend_key] = depend_response_data
 
@@ -53,7 +60,14 @@ class RunMain:
                     header
                 )
                 # print(id,res)
-                if self.compar_unil.is_contain(expect, res):  # 结果判断
+
+                """
+                ###############################################
+                        结果判断，并回传数据
+                ############################################### 
+                """
+
+                if self.compar_unil.is_contain(expect, res):
                     self.data.write_result(i, "pass")  # 回写数据
                     pass_count.append(i)    # 统计成功个数
                     # print(i,"测试通过")
@@ -62,7 +76,11 @@ class RunMain:
                     fail_count.append(i)    # 统计失败个数
                     # print(i,"测试失败")
 
-        # 发送邮件
+        """
+        ###############################################
+                    邮件发送
+        ###############################################    
+        """
         # self.send_mai.send_main(pass_count, fail_count)
 
         # print("通过用例为：", pass_count, " 总计： ", len(pass_count))

@@ -39,7 +39,7 @@ class GetData:
             flag = False
         return flag
 
-    # 是够携带 header
+    # 是否携带 header
     def is_header(self, row):
         col = int(data_config.get_header())
         header = self.readexcel.get_cell_value(row, col)
