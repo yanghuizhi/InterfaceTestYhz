@@ -6,7 +6,7 @@ from data.get_data import GetData           # data数据
 from common.comparison import Comparison    # 结果比对
 from data.depende_data import DependdentData    # 依赖问题
 from unit.unit_email import SendEmail           # 邮件发送
-
+# from unit.operation_header import
 
 class RunMain:
     def __init__(self):
@@ -53,12 +53,21 @@ class RunMain:
                     depend_key = self.data.get_depend_field(i)
                     request_data[depend_key] = depend_response_data
 
-                res = self.run_method.run_main(
-                    method,
-                    url,
-                    request_data,
-                    header
-                )
+                if header == "write":
+                    res = self.run_method.run_main(method,url,request_data)
+                    op_header=OperationHeader(res)
+                    op_header.write_cookie()
+
+                if header != "write":
+                    # cooke
+                    res = self.run_method.run_main(method,url,request_data,header)
+
+                # res = self.run_method.run_main(
+                #     method,
+                #     url,
+                #     request_data,
+                #     header
+                # )
                 # print(id,res)
 
                 """

@@ -8,22 +8,27 @@
 import requests
 
 url = "http://m.imooc.com/passport/user/login"
+
 data = {
     "username":"18271670195",
     "password":"www2932097",
     "verify":"",
     "referer": "https://m.imooc.com",
 }
+
 res = requests.post(url,data).json()
 # print(res)
-"""
-{'status': 10001, 'msg': '成功', 'data': {'userInfo': {'uid': '6680857'}, 'url': ['http://www.imooc.com/user/ssologin?token=ovI4t3ttncgy4x7mwL7pOYYJ7b_UfQAgWnOcleLo0N5VW5SNgt0RXHb9Yuy3qUNYyI4Re89hshf9RlI-35QHe7O741u7wY53u06d9mRZ57PO9bVPYLK9kir0NKLp6refhf3qfEpQDYkumBL87qh8NzFlyOgfqg1LCww7IVV9tp54ZaOEBgKfhanIKAxOgWK-sCaDc4pGT0onoGcAjP3mU3NPDZwIl3KgfUxix4Jhc423A8TQ0-JsHFd7bkKp_QD1-50O3YQZiC7o', 'http://coding.imooc.com/user/ssologin?token=vXLTLZnvUGD9F8QAYC1NPXvyRBURDecoPvUXMhzrgYPrVGvqDxdIoeHG3sr54DOShJAYl8UTGMnAp-o3YKYNKoNrqjyfU2b3k7Nl3jJdJdk9B4j0xWCKQU50j5VxvVNC4vJN6_PmrKs3E8ypxQtNHJXl20SkahmtyxC4GefUFvw-Gb1XxAzXtEiGCLDGvzzohPUcvW-x4DV5o9iozB0Jxa2oxXM4y554g9k9vgZNIDDIVo0cKb5oZvq2hSqYPkBv-pfVNUvnO8']}}
-"""
+
 response_url = res['data']['url'][0]
-request_url = response_url+""
+# http://www.imooc.com/user/ssologin?token=Es3TjyT2xj3On3AjdlTHF5qB9L-SbkWCMBZulXd7DSyYwr9zCEnnRNVG9EKHU2h08o1f8CaEgpfDYKE4wMExxCLF9PStUvsH-bNpiwqdZCyDg_4DwKVBcU11tUIKNgSxTnH3RmbwVoWKmzrY0i1LN6zwEGzgM9D7S-2OQR4v1FcCEZlDpz8I3uQc7fhtGOxGGM973P5BIT5JQsq1uHf7g3qtg8-smSk5gUfIczW27uzTl9CuFRBdInrcGpKmzvPz-qmgy43bkf
+
+request_url = response_url+"&callback=jQuery191004342300488107509_1546761851114"
 cookie = requests.get(request_url).cookies
 
-# requests.utils.dict_from_cookiejar(cookie)
+# <RequestsCookieJar[<Cookie apsid=NlNzZkMThmNWJmNTc4MmEzNjY5YzdjNmQ0OWRjMmIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANjY4MDg1NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgzYjlhN2FjMDJjODYyZmQ2Mjc4ZTk0ZTQxNzZiMjhir7gxXK%2B4MVw%3DMG for .imooc.com/>, <Cookie cvde=5c31b8af4649b-1 for .imooc.com/>, <Cookie imooc_isnew=1 for .imooc.com/>, <Cookie imooc_isnew_ct=1546762415 for .imooc.com/>, <Cookie imooc_uuid=11947d05-875e-49cf-90f2-f59b2f7681d8 for .imooc.com/>, <Cookie loginstate=1 for .imooc.com/>]>
+
+# cookie = requests.utils.dict_from_cookiejar(cookie)
 # print(cookie["apsid"])
-url1 = "新的地址"
-# print(requests.get(url=url1,cookie=cookie).text)
+
+url1 = "https://order.imooc.com/pay/cartorder?jsonpcallback=jQuery1113023891953999072268_1546762895967&_=1546762895968"
+print(requests.get(url=url1,cookies=cookie).text)

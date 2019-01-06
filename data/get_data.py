@@ -44,16 +44,16 @@ class GetData:
         col = int(data_config.get_header())
         header = self.readexcel.get_cell_value(row, col)
         # 方案一：写死数据，从方法里获取
-        # if header == "yes":
-        #     return data_config.get_header()
-        # else:
-        #     return None
-
-        # 方案二：重新定义数据，不为空则使用，为空则不实用
-        if header != "":
+        if header == "yes":
             return data_config.get_header()
         else:
             return None
+
+        # 方案二：重新定义数据，不为空则使用，为空则不实用
+        # if header != "":
+        #     return data_config.get_header()
+        # else:
+        #     return None
 
     # 获取请求方式
     def get_request_method(self, row):
